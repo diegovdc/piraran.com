@@ -127,15 +127,15 @@
     (map (fn [{:keys [title youtube-id]}]
            [:div {:class "videography__video"}
             [:h3 (lang title)]
-            [:iframe
-             {:width "560",
-              :height "315",
-              :src (str "https://www.youtube.com/embed/" youtube-id),
-              :title "YouTube video player",
-              :frameborder "0",
-              :allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
-              :referrerpolicy "strict-origin-when-cross-origin",
-              :allowfullscreen true}]])
+            [:div {:class "videography__iframe-container"}
+             [:iframe
+              {:class "videography__iframe"
+               :src (str "https://www.youtube.com/embed/" youtube-id)
+               :title "YouTube video player"
+               :frameborder "0"
+               :allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+               :referrerpolicy "strict-origin-when-cross-origin"
+               :allowfullscreen true}]]])
          videos)]])
 
 (defn images*
