@@ -132,3 +132,8 @@ p {
   list-style: none;
   font-size: 18px;
 }
+
+.press-kit__contact-information {
+  font-size: 24px;
+  text-align: center;
+}

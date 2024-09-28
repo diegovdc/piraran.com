@@ -163,6 +163,13 @@
         [:p [:a {:href href :target "_blank"} name]])
       external-links)]])
 
+(defn contact-info
+  [lang]
+  [:section
+   [:h2 {:id "contact-info"} (case lang :en "Contact" :es "Contacto")]
+   [:div {:class "press-kit__contact-information"}
+    [:a {:href "mailto:piraran.ensamble@gmail.com"}  "piraran.ensamble@gmail.com"]]])
+
 (defn menu
   [lang]
   [:nav {:class "press-kit__menu"}
@@ -172,7 +179,8 @@
     [:li [:a {:href "#discography"} (case lang :en "Discography" :es "Discografía")]]
     [:li [:a {:href "#videography"} (case lang :en "Videography" :es "Videografía")]]
     [:li [:a {:href "#images"} (case lang :en "Images" :es "Imágenes")]]
-    [:li [:a {:href "#external-links"} (case lang :en "External Links" :es "Vínculos Externos")]]]])
+    [:li [:a {:href "#external-links"} (case lang :en "External Links" :es "Vínculos Externos")]]
+    [:li [:a {:href "#contact-info"} (case lang :en "Contact" :es "Contacto")]]]])
 
 (defn main
   [{:keys [lang]}]
@@ -197,11 +205,12 @@
       [:h1 (case lang :en "Press Kit" :es "Kit de Prensa")]
       (menu lang)
       (about-piraran* lang)
-      (members* lang)
       (discography* lang)
+      (external-links* lang)
       (videography* lang)
       (images* lang)
-      (external-links* lang)]]]])
+      (members* lang)
+      (contact-info lang)]]]])
 
 (comment)
 (piraran.build/compile-press-page :es)
