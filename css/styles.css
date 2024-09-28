@@ -107,7 +107,18 @@ p {
 .press-kit__member small {
   display: block;
   font-size: 18px;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
+}
+
+.press-kit__member-links {
+  display: flex;
+  gap: 16px;
+}
+.press-kit__member-links a {
+  margin-bottom: 8px;
+  font-size: 18px;
+  padding: 8px 0;
+  display: block;
 }
 
 .press-kit__menu ul {

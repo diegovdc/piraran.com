@@ -43,27 +43,35 @@
     :location {:en "(Morelia, Mx)" :es "(Morelia, Mx)"}
     :bio {:en "Composer and electronic instrumentalist. His work includes acoustic and electroacoustic music. His creative search extends to fields such as improvisation with electronic/digital media and phonography."
           :es "Compositor e instrumentista electrónico. Su trabajo incluye música acústica y electroacústica. Su búsqueda creativa se extiende a campos como la improvisación con medios electrónicos/digitales y la fonografía."}
-    :img "/assets/images/ivan-lopez.jpg"}
+    :img "/assets/images/ivan-lopez.jpg"
+    :links ["instagram.com/ivan_lo_pi_"]}
    {:name "Diego Villaseñor"
     :location {:en "(Mexico City, Mx)" :es "(Ciudad de México, Mx)"}
     :bio {:en "Composer, improviser, live coder and philosopher. His work is focused on collective creation, modular composition and processes inspired by natural systems."
           :es "Compositor, improvisador, live coder y filósofo. Su trabajo se centra en la creación colectiva, la composición modular y los procesos inspirados en sistemas naturales."}
-    :img "/assets/images/diego-villasenor.jpg"}
+    :img "/assets/images/diego-villasenor.jpg"
+    :links ["echoic.space"
+            "youtube.com/@diegovideco"
+            "instagram.com/diegovideco"]}
    {:name "Alejandro Franco Briones"
     :location {:en "(Hamilton, Ontario, Canada)" :es "(Hamilton, Ontario, Canada)"}
     :bio {:en "Composer, live coder, sound artist, and scholar from Mexico City. Some of his major interests include time-oriented music, network art ecologies, and musical/technological notational systems."
           :es "Compositor, live coder, artista sonoro y académico de la Ciudad de México. Algunos de sus principales intereses incluyen la música orientada al tiempo, las ecologías artísticas en red y los sistemas de notación musical/tecnológica."}
-    :img "/assets/images/alejandro-franco-briones.jpg"}])
+    :img "/assets/images/alejandro-franco-briones.jpg"
+    :links ["afrancob.github.io/sfelfdt"]}])
 
 (defn members*
   [lang]
   [:section
    [:h3 {:id "members"} (case lang :en "Members" :es "Miembros")]
    (map
-    (fn [{:keys [name location bio img]}]
+    (fn [{:keys [name location bio img links]}]
       [:div {:class "press-kit__member"}
        [:h4 name]
        [:small (lang location)]
+       [:div {:class "press-kit__member-links"}
+        (map (fn [link] [:a {:href (str "https://" link) :target "_blank"} link])
+          links)]
        [:img {:src img}]
        [:p (lang bio)]])
     members)])
@@ -83,7 +91,7 @@
     :img "/assets/images/aam-vol2.jpg"}
    {:title {:es "With/out Dancing"
             :en  "With/out Dancing"}
-    :href "https://piraran.bandcamp.com/album/algorithmic-acid-music-vol-2"
+    :href "https://piraran.bandcamp.com/track/with-out-dancing"
     :img "/assets/images/without-dancing.jpg"}
    {:title {:es "La Fábrica Colapsada"
             :en "La Fábrica Colapsada (The Colapsed Factory"}
@@ -195,6 +203,6 @@
       (images* lang)
       (external-links* lang)]]]])
 
-(comment
-  (piraran.build/compile-press-page :es)
-  (piraran.build/compile-press-page :en))
+(comment)
+(piraran.build/compile-press-page :es)
+(piraran.build/compile-press-page :en)
