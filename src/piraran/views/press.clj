@@ -176,10 +176,10 @@
   [:nav {:class "press-kit__menu"}
    [:ul
     [:li [:a {:href "#about"} (case lang :en "About Pirarán" :es "Sobre Pirarán")]]
-    [:li [:a {:href "#members"} (case lang :en "Members" :es "Miembros")]]
     [:li [:a {:href "#discography"} (case lang :en "Discography" :es "Discografía")]]
     [:li [:a {:href "#videography"} (case lang :en "Videography" :es "Videografía")]]
     [:li [:a {:href "#images"} (case lang :en "Images" :es "Imágenes")]]
+    [:li [:a {:href "#members"} (case lang :en "Members" :es "Miembros")]]
     [:li [:a {:href "#external-links"} (case lang :en "External Links" :es "Vínculos Externos")]]
     [:li [:a {:href "#contact-info"} (case lang :en "Contact" :es "Contacto")]]]])
 
@@ -208,10 +208,10 @@
       (menu lang)
       (about-piraran* lang)
       (discography* lang)
-      (external-links* lang)
       (videography* lang)
       (images* lang)
       (members* lang)
+      (external-links* lang)
       (contact-info lang)]]]])
 
 (comment)
