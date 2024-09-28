@@ -31,6 +31,7 @@
   [lang]
   [:section
    [:h2 {:id "about"} (case lang :en "About Pirarán" :es "Sobre Pirarán")]
+   [:p {:class "press-kit__statement"} [:quote "\"" (lang statement) "\""]]
    [:img {:style {:max-width "800px"
                   :display "block"
                   :margin "0 auto"}

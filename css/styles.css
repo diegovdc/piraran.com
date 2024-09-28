@@ -137,3 +137,10 @@ p {
   font-size: 24px;
   text-align: center;
 }
+
+.press-kit__statement {
+  font-size: 18px;
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+}
