@@ -1,0 +1,123 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+img {
+  width: 100%;
+}
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 24px;
+  line-height: 1.618;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.press-kit {
+  background-color: #111;
+  color: white;
+}
+
+.press-kit h1,
+.press-kit h2,
+.press-kit h3 {
+  text-align: center;
+}
+
+.press-kit__band-img {
+  max-width: 100%;
+  width: 550px;
+  margin-bottom: 60px;
+}
+
+.discography {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.discography__album {
+  max-width: 300px;
+}
+
+.press-kit a {
+  color: white;
+}
+.discography__album img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.images {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.videography__video {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.press-kit__external-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.press-kit section {
+  display: block;
+  margin-bottom: 80px;
+}
+
+.press-kit__member {
+  margin-bottom: 48px;
+}
+
+.press-kit__member img {
+  max-width: 500px;
+  display: block;
+}
+
+.press-kit__member h4 {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.press-kit__member small {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.press-kit__menu ul {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.press-kit__menu li {
+  list-style: none;
+  font-size: 18px;
+}

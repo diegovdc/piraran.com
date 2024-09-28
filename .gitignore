@@ -1,0 +1,6 @@
+**/.DS_Store
+.cider-repl-history
+.clj-kondo/
+.cpcache/
+.lsp/
+.nrepl-port
