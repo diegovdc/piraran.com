@@ -72,7 +72,7 @@
        [:small (lang location)]
        [:div {:class "press-kit__member-links"}
         (map (fn [link] [:a {:href (str "https://" link) :target "_blank"} link])
-          links)]
+             links)]
        [:img {:src img}]
        [:p (lang bio)]])
     members)])
@@ -160,9 +160,9 @@
    [:h2 {:id "external-links"} (case lang :en "External Links" :es "Vínculos Externos")]
    [:div {:class "press-kit__external-links"}
     (map
-      (fn [{:keys [name href]}]
-        [:p [:a {:href href :target "_blank"} name]])
-      external-links)]])
+     (fn [{:keys [name href]}]
+       [:p [:a {:href href :target "_blank"} name]])
+     external-links)]])
 
 (defn contact-info
   [lang]
@@ -190,6 +190,7 @@
                        (case lang :en "Press Kit" :es "Kit de Prensa"))]
      [:head
       [:title title]
+      [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
       [:meta {:property "og:title", :content title}]
       [:meta
        {:property "og:description",
