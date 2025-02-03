@@ -3,9 +3,9 @@
 (def images
   (map (fn [img]
          (format "/assets/images/%s.jpeg" img))
-       ["IMG_0073"
-        "IMG_0077"
-        "IMG_0084"
+       ["IMG_0073-v2"
+        "IMG_0077-v2"
+        "IMG_0084-v2"
         "IMG_9709"
         "IMG_9714"
         "IMG_9728"
@@ -190,6 +190,7 @@
                        (case lang :en "Press Kit" :es "Kit de Prensa"))]
      [:head
       [:title title]
+      [:meta {:charset "UTF-8"}]
       [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
       [:meta {:property "og:title", :content title}]
       [:meta
